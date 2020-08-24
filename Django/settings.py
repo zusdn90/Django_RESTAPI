@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'knox',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
