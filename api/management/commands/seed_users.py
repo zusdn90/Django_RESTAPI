@@ -1,6 +1,6 @@
 from django_seed import Seed
 from django.core.management.base import BaseCommand
-from quickstart.serializers import User
+from api.serializers import User
 
 class Command(BaseCommand):
     help = 'This command creates users'

@@ -25,7 +25,7 @@ SECRET_KEY = 'd9^5liz6mu42ll#)q_$f9q$w@x%-odry^_z8vom(%k1(6ep)w7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'quickstart',
-    'rest_framework'
+    'api',
+    'rest_framework',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,8 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': ("knox.auth.TokenAuthentication",),
 }
 
 
